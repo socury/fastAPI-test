@@ -3,7 +3,10 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/")
+@app.get(
+    "/",
+    summary="엔드 포인트1",
+    description="설명")
 async def root():
     return {"message": "Hello World"}
 
